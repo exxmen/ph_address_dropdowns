@@ -1,0 +1,43 @@
+00:00 +0: loading /Volumes/DockSSD/Projects/dart/ph_address_dropdowns/test/ph_address_picker_test.dart                                                                                                 00:01 +0: loading /Volumes/DockSSD/Projects/dart/ph_address_dropdowns/test/ph_address_picker_test.dart                                                                                                 00:01 +0: PhAddressPicker NCR test (no province)                                                                                                                                                       00:01 +0: PhAddressPicker NCR test (no province)                                                                                                                                                       
+══╡ EXCEPTION CAUGHT BY FLUTTER TEST FRAMEWORK ╞════════════════════════════════════════════════════
+The following UnsupportedError was thrown running a test:
+Unsupported operation: Cannot modify an unmodifiable list
+
+When the exception was thrown, this was the stack:
+#0      UnmodifiableListMixin.sort (dart:_internal/list.dart:147:5)
+#1      _PhAddressPickerState._loadRegions.<anonymous closure> (package:ph_address_dropdowns/src/widgets/ph_address_picker.dart:65:16)
+#2      State.setState (package:flutter/src/widgets/framework.dart:1199:30)
+#3      _PhAddressPickerState._loadRegions (package:ph_address_dropdowns/src/widgets/ph_address_picker.dart:63:5)
+<asynchronous suspension>
+
+The test description was:
+  PhAddressPicker NCR test (no province)
+════════════════════════════════════════════════════════════════════════════════════════════════════
+00:01 +0 -1: PhAddressPicker NCR test (no province) [E]                                                                                                                                                
+  Test failed. See exception logs above.
+  The test description was: PhAddressPicker NCR test (no province)
+  
+══╡ EXCEPTION CAUGHT BY FLUTTER TEST FRAMEWORK ╞════════════════════════════════════════════════════
+The following assertion was thrown running a test (but after the test had completed):
+pumpAndSettle timed out
+
+When the exception was thrown, this was the stack:
+#0      WidgetTester.pumpAndSettle.<anonymous closure> (package:flutter_test/src/widget_tester.dart:717:11)
+<asynchronous suspension>
+#1      TestAsyncUtils.guard.<anonymous closure> (package:flutter_test/src/test_async_utils.dart:130:27)
+<asynchronous suspension>
+#2      main.<anonymous closure> (file:///Volumes/DockSSD/Projects/dart/ph_address_dropdowns/test/ph_address_picker_test.dart:169:5)
+<asynchronous suspension>
+#3      testWidgets.<anonymous closure>.<anonymous closure> (package:flutter_test/src/widget_tester.dart:192:15)
+<asynchronous suspension>
+#4      TestWidgetsFlutterBinding._runTestBody (package:flutter_test/src/binding.dart:1059:5)
+<asynchronous suspension>
+<asynchronous suspension>
+(elided one frame from package:stack_trace)
+════════════════════════════════════════════════════════════════════════════════════════════════════
+  Test failed. See exception logs above.
+  The test description was: PhAddressPicker NCR test (no province)
+  
+
+To run this test again: /opt/homebrew/share/flutter/bin/cache/dart-sdk/bin/dart test /Volumes/DockSSD/Projects/dart/ph_address_dropdowns/test/ph_address_picker_test.dart -p vm --plain-name 'PhAddressPicker NCR test (no province)'
+00:02 +0 -1: Some tests failed.                                                                                                                                                                        

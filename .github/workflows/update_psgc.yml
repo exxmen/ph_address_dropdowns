@@ -1,0 +1,80 @@
+name: Update PSGC Data
+
+on:
+  schedule:
+    # Run once a week on Monday at 00:00 UTC
+    - cron: '0 0 * * 1'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  update-psgc:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Setup Flutter
+        uses: subosito/flutter-action@v2
+        with:
+          channel: 'stable'
+          
+      - name: Install dependencies
+        run: flutter pub get
+
+      - name: Install @jobuntux/psgc
+        run: npm install @jobuntux/psgc
+
+      - name: Copy latest PSGC data
+        run: |
+          # Find the data directory
+          DATA_ROOT="node_modules/@jobuntux/psgc/data"
+          
+          # Get the latest quarter directory (sort reverse and pick first)
+          LATEST_DIR=$(ls -1d $DATA_ROOT/*/ | sort -r | head -n 1)
+          
+          echo "Detected latest data version: $LATEST_DIR"
+          
+          # Create assets directory if it doesn't exist
+          mkdir -p assets/json
+          
+          # Copy the JSON files
+          cp "$LATEST_DIR/regions.json" assets/json/
+          cp "$LATEST_DIR/provinces.json" assets/json/
+          cp "$LATEST_DIR/muncities.json" assets/json/
+          cp "$LATEST_DIR/barangays.json" assets/json/
+          
+          echo "Data copied successfully."
+
+      - name: Run Tests
+        run: flutter test
+
+      - name: Check for changes
+        id: git-check
+        run: |
+          if [[ -n $(git status --porcelain) ]]; then
+            echo "changes=true" >> $GITHUB_OUTPUT
+            echo "Changes detected."
+          else
+            echo "No changes detected."
+          fi
+
+      - name: Create Pull Request
+        if: steps.git-check.outputs.changes == 'true'
+        uses: peter-evans/create-pull-request@v6
+        with:
+          title: "chore: update PSGC data"
+          commit-message: "chore: update PSGC data assets"
+          branch: "chore/update-psgc-data"
+          delete-branch: true
+          body: |
+            Automated update of Philippines Standard Geographic Code (PSGC) data 
+            sourced from [@jobuntux/psgc](https://www.npmjs.com/package/@jobuntux/psgc).
