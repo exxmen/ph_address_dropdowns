@@ -1,5 +1,5 @@
 name: ph_address_dropdowns
-description: "A new Flutter package project."
+description: "A Flutter package providing cascading dropdowns for Philippines addresses (Region, Province, City, Barangay) with automated PSGC data updates."
 version: 0.0.1-beta.1
 homepage:
 repository: https://github.com/exxmen/ph_address_dropdowns
