@@ -1,3 +1,5 @@
-## 0.0.1
+## 0.0.1-beta.1
 
-* TODO: Describe initial release.
+* Initial beta release.
+* Added `PhAddressPicker` widget for cascading address selection.
+* Added PSGC data automated updates via GitHub Actions.
