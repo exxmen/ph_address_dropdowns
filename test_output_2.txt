@@ -1,0 +1,44 @@
+00:00 +0: loading /Volumes/DockSSD/Projects/dart/ph_address_dropdowns/test/ph_address_picker_test.dart                                                                                                 00:01 +0: loading /Volumes/DockSSD/Projects/dart/ph_address_dropdowns/test/ph_address_picker_test.dart                                                                                                 00:01 +0: PhAddressPicker NCR test (no province)                                                                                                                                                       00:01 +0: PhAddressPicker NCR test (no province)                                                                                                                                                       
+
+Warning: A call to tap() with finder "Found 1 widget with text "Select Region": [
+  Text("Select Region", dependencies: [DefaultSelectionStyle, DefaultTextStyle, MediaQuery]),
+]" derived an Offset (Offset(121.0, 24.0)) that would not hit test on the specified widget.
+Maybe the widget is actually off-screen, or another widget is obscuring it, or the widget cannot receive pointer events.
+The finder corresponds to this RenderBox: RenderParagraph#00788 relayoutBoundary=up8
+The hit test result at that offset is: HitTestResult(_RenderDecoration#2081e@Offset(121.0, 24.0), RenderPointerListener#31650@Offset(121.0, 24.0), RenderSemanticsGestureHandler#d86d8@Offset(121.0, 24.0), RenderMouseRegion#f16fe@Offset(121.0, 24.0), RenderSemanticsAnnotations#b85a2@Offset(121.0, 24.0), RenderSemanticsAnnotations#69c22@Offset(121.0, 24.0), RenderSemanticsAnnotations#f8462@Offset(121.0, 24.0), RenderSemanticsAnnotations#128af@Offset(121.0, 24.0), RenderFlex#337cf@Offset(121.0, 24.0), RenderCustomMultiChildLayoutBox#5da5c@Offset(121.0, 24.0), _RenderInkFeatures#f32ef@Offset(121.0, 24.0), RenderPhysicalModel#89071@Offset(121.0, 24.0), RenderSemanticsAnnotations#d1b26@Offset(121.0, 24.0), RenderRepaintBoundary#81544@Offset(121.0, 24.0), RenderIgnorePointer#50693@Offset(121.0, 24.0), _RenderSnapshotWidget#5b16e@Offset(121.0, 24.0), _RenderSnapshotWidget#6ebf7@Offset(121.0, 24.0), _RenderSnapshotWidget#e5d97@Offset(121.0, 24.0), _RenderSnapshotWidget#3e723@Offset(121.0, 24.0), RenderRepaintBoundary#9a29e@Offset(121.0, 24.0), RenderSemanticsAnnotations#70032@Offset(121.0, 24.0), RenderOffstage#93e9e@Offset(121.0, 24.0), RenderSemanticsAnnotations#c2f16@Offset(121.0, 24.0), _RenderTheater#9bad2@Offset(121.0, 24.0), RenderAbsorbPointer#0b4dc@Offset(121.0, 24.0), RenderPointerListener#577f4@Offset(121.0, 24.0), RenderSemanticsAnnotations#4e926@Offset(121.0, 24.0), RenderCustomPaint#8d3da@Offset(121.0, 24.0), RenderSemanticsAnnotations#60e18@Offset(121.0, 24.0), RenderSemanticsAnnotations#89fc6@Offset(121.0, 24.0), RenderTapRegionSurface#32ec5@Offset(121.0, 24.0), RenderSemanticsAnnotations#c1761@Offset(121.0, 24.0), RenderSemanticsAnnotations#f812b@Offset(121.0, 24.0), RenderSemanticsAnnotations#f980e@Offset(121.0, 24.0), HitTestEntry<HitTestTarget>#6025f(_ReusableRenderView#683f0), HitTestEntry<HitTestTarget>#c4d87(<AutomatedTestWidgetsFlutterBinding>))
+#0      WidgetController._getElementPoint (package:flutter_test/src/controller.dart:2077:25)
+#1      WidgetController.getCenter (package:flutter_test/src/controller.dart:1861:12)
+#2      WidgetController.tap (package:flutter_test/src/controller.dart:1041:7)
+#3      main.<anonymous closure> (file:///Volumes/DockSSD/Projects/dart/ph_address_dropdowns/test/ph_address_picker_test.dart:172:18)
+<asynchronous suspension>
+#4      testWidgets.<anonymous closure>.<anonymous closure> (package:flutter_test/src/widget_tester.dart:192:15)
+<asynchronous suspension>
+#5      TestWidgetsFlutterBinding._runTestBody (package:flutter_test/src/binding.dart:1059:5)
+<asynchronous suspension>
+#6      StackZoneSpecification._registerCallback.<anonymous closure> (package:stack_trace/src/stack_zone_specification.dart:114:42)
+<asynchronous suspension>
+To silence this warning, pass "warnIfMissed: false" to "tap()".
+To make this warning fatal, set WidgetController.hitTestWarningShouldBeFatal to true.
+
+
+Warning: A call to tap() with finder "Found 1 widget with text "Select City / Municipality": [
+  Text("Select City / Municipality", dependencies: [DefaultSelectionStyle, DefaultTextStyle, MediaQuery]),
+]" derived an Offset (Offset(225.9, 88.0)) that would not hit test on the specified widget.
+Maybe the widget is actually off-screen, or another widget is obscuring it, or the widget cannot receive pointer events.
+The finder corresponds to this RenderBox: RenderParagraph#a6d75 relayoutBoundary=up8
+The hit test result at that offset is: HitTestResult(HitTestEntry<HitTestTarget>#e24d4(TextSpan(debugLabel: (((englishLike bodyLarge 2021).merge((blackMountainView bodyLarge).apply)).copyWith).copyWith, inherit: false, color: Color(alpha: 1.0000, red: 0.2863, green: 0.2706, blue: 0.3098, colorSpace: ColorSpace.sRGB), family: Roboto, size: 16.0, weight: 400, letterSpacing: 0.5, baseline: alphabetic, height: 1.0x, leadingDistribution: even, decoration: Color(alpha: 1.0000, red: 0.1137, green: 0.1059, blue: 0.1255, colorSpace: ColorSpace.sRGB) TextDecoration.none, "City / Municipality")), RenderParagraph#9351a@Offset(209.9, 8.0), RenderAnimatedOpacity#be4e6@Offset(209.9, 8.0), _RenderDecoration#f619b@Offset(225.9, 24.0), RenderPointerListener#50491@Offset(225.9, 24.0), RenderSemanticsGestureHandler#88dc7@Offset(225.9, 24.0), RenderMouseRegion#728b5@Offset(225.9, 24.0), RenderSemanticsAnnotations#4199b@Offset(225.9, 24.0), RenderSemanticsAnnotations#7b5e3@Offset(225.9, 24.0), RenderSemanticsAnnotations#04de8@Offset(225.9, 24.0), RenderSemanticsAnnotations#c01cb@Offset(225.9, 24.0), RenderFlex#337cf@Offset(225.9, 88.0), RenderCustomMultiChildLayoutBox#5da5c@Offset(225.9, 88.0), _RenderInkFeatures#f32ef@Offset(225.9, 88.0), RenderPhysicalModel#89071@Offset(225.9, 88.0), RenderSemanticsAnnotations#d1b26@Offset(225.9, 88.0), RenderRepaintBoundary#81544@Offset(225.9, 88.0), RenderIgnorePointer#50693@Offset(225.9, 88.0), _RenderSnapshotWidget#5b16e@Offset(225.9, 88.0), _RenderSnapshotWidget#6ebf7@Offset(225.9, 88.0), _RenderSnapshotWidget#e5d97@Offset(225.9, 88.0), _RenderSnapshotWidget#3e723@Offset(225.9, 88.0), RenderRepaintBoundary#9a29e@Offset(225.9, 88.0), RenderSemanticsAnnotations#70032@Offset(225.9, 88.0), RenderOffstage#93e9e@Offset(225.9, 88.0), RenderSemanticsAnnotations#c2f16@Offset(225.9, 88.0), _RenderTheater#9bad2@Offset(225.9, 88.0), RenderAbsorbPointer#0b4dc@Offset(225.9, 88.0), RenderPointerListener#577f4@Offset(225.9, 88.0), RenderSemanticsAnnotations#4e926@Offset(225.9, 88.0), RenderCustomPaint#8d3da@Offset(225.9, 88.0), RenderSemanticsAnnotations#60e18@Offset(225.9, 88.0), RenderSemanticsAnnotations#89fc6@Offset(225.9, 88.0), RenderTapRegionSurface#32ec5@Offset(225.9, 88.0), RenderSemanticsAnnotations#c1761@Offset(225.9, 88.0), RenderSemanticsAnnotations#f812b@Offset(225.9, 88.0), RenderSemanticsAnnotations#f980e@Offset(225.9, 88.0), HitTestEntry<HitTestTarget>#4c56c(_ReusableRenderView#683f0), HitTestEntry<HitTestTarget>#0f4e4(<AutomatedTestWidgetsFlutterBinding>))
+#0      WidgetController._getElementPoint (package:flutter_test/src/controller.dart:2077:25)
+#1      WidgetController.getCenter (package:flutter_test/src/controller.dart:1861:12)
+#2      WidgetController.tap (package:flutter_test/src/controller.dart:1041:7)
+#3      main.<anonymous closure> (file:///Volumes/DockSSD/Projects/dart/ph_address_dropdowns/test/ph_address_picker_test.dart:182:18)
+<asynchronous suspension>
+#4      testWidgets.<anonymous closure>.<anonymous closure> (package:flutter_test/src/widget_tester.dart:192:15)
+<asynchronous suspension>
+#5      TestWidgetsFlutterBinding._runTestBody (package:flutter_test/src/binding.dart:1059:5)
+<asynchronous suspension>
+#6      StackZoneSpecification._registerCallback.<anonymous closure> (package:stack_trace/src/stack_zone_specification.dart:114:42)
+<asynchronous suspension>
+To silence this warning, pass "warnIfMissed: false" to "tap()".
+To make this warning fatal, set WidgetController.hitTestWarningShouldBeFatal to true.
+
+00:01 +1: PhAddressPicker NCR test (no province)                                                                                                                                                       00:01 +1: All tests passed!                                                                                                                                                                            
