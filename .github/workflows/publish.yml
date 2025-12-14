@@ -25,9 +25,8 @@ jobs:
       - name: Setup Pub Credentials (OIDC)
         uses: dart-lang/setup-dart@v1
         with:
-          # This tells the action to use the existing Flutter SDK for pub commands
-          # but still perform the OIDC authentication step.
-          sdk: flutter
+          # Use stable Dart SDK for OIDC setup to avoid download errors with 'flutter'
+          sdk: stable
 
       - name: Install dependencies
         run: flutter pub get
