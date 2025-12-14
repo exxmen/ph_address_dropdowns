@@ -53,6 +53,9 @@ jobs:
           cp "$LATEST_DIR/barangays.json" assets/json/
           
           echo "Data copied successfully."
+          
+          # Clean up npm artifacts so they don't trigger git changes
+          rm -rf node_modules package.json package-lock.json
 
       - name: Run Tests
         run: flutter test

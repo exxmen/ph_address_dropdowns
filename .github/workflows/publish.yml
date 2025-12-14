@@ -1,0 +1,38 @@
+name: Publish to Pub.dev
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  id-token: write # Required for authenticating with Pub.dev via OIDC
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Flutter
+        uses: subosito/flutter-action@v2
+        with:
+          channel: 'stable' 
+
+      - name: Setup Pub Credentials (OIDC)
+        uses: dart-lang/setup-dart@v1
+        with:
+          # This tells the action to use the existing Flutter SDK for pub commands
+          # but still perform the OIDC authentication step.
+          sdk: flutter
+
+      - name: Install dependencies
+        run: flutter pub get
+
+      - name: Publish Package
+        # --force skips confirmation prompts
+        # The job will fail if the version already exists, which is intended.
+        run: flutter pub publish --force
